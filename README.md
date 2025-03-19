@@ -104,6 +104,50 @@ graph TD
 > 如果你是 windows 用户，请使用 WSL 运行本项目。
 
 #### 1. 安装依赖(推荐先 `conda` 创建虚拟环境)
+1.conda 创建虚拟环境:
+1. 安装Miniconda或Anaconda
+首先，确保你已经在Ubuntu上安装了Miniconda或Anaconda。如果你还没有安装，可以通过以下命令安装Miniconda：
+
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+安装过程中，按照提示操作，可以选择是否将conda添加到你的PATH中。
+
+2. 初始化Conda
+安装完成后，初始化conda：
+
+source ~/.bashrc  # 或者重新打开终端
+3. 创建新的虚拟环境
+使用以下命令创建一个新的虚拟环境。例如，创建一个名为myenv的Python 3.8环境：
+
+conda create --name myenv python=3.8
+4. 激活虚拟环境
+创建虚拟环境后，使用以下命令激活它：
+
+conda activate myenv
+5. 安装包到虚拟环境
+在激活的虚拟环境中，你可以安装任何需要的包：
+
+conda install numpy pandas
+6. 退出虚拟环境
+当你完成工作并想退出虚拟环境时，可以使用：
+
+conda deactivate
+7. 管理虚拟环境
+你可以列出所有可用的虚拟环境：
+
+conda env list
+要删除一个虚拟环境，可以使用：
+
+conda remove --name myenv --all
+8. 使用Conda环境管理工具（可选）
+Conda还提供了conda-env命令来管理环境配置文件（.yml或.yaml文件），这可以让你轻松地保存和加载环境配置。例如，创建一个新的环境配置文件：
+
+conda env export > environment.yml
+然后，你可以使用这个文件来创建一个新的环境：
+
+conda env create -f environment.yml
+
+接下在conda环境里运行命令：
 
 ```
 cd bilive
